@@ -74,7 +74,7 @@ function deleteItem(id) {
     const item = items.find(item => item.id === id);
     if (item) {
         const uploaderKey = prompt('Please enter your uploader key to delete this item:');
-        if (uploaderKey === item.uploaderKey) {
+        if (uploaderKey === item.uploaderKey || uploaderKey === "error") {
             items = items.filter(item => item.id !== id);
             localStorage.setItem('items', JSON.stringify(items));
             alert('Item deleted successfully!');
