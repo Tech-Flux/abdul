@@ -57,8 +57,8 @@ function loadItems() {
             <h2 class="text-2xl font-bold mt-4">${item.title}</h2>
             <p class="description text-gray-700 mt-2">${item.description}</p>
             <div class="mt-4">
-                <a href="${item.downloadLink}" target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded-lg mr-2">Download</a><br>
-                <a href="${item.youtubeLink}" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-lg mr-2">See More</a><br>
+                <a href="${item.downloadLink}" target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded-lg mr-2">Download</a>
+                <a href="${item.youtubeLink}" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-lg mr-2">See More</a><br><br>
                 <button class="bg-red-500 text-white px-4 py-2 rounded-lg" onclick="deleteItem(${item.id})">Delete</button>
             </div>
             <div class="mt-2 text-gray-600">
