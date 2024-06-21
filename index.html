@@ -26,15 +26,14 @@
                 <img src="assets/logo.jpg" alt="Logo" class="w-12 h-auto mr-4 icon-border">
                 <h1 class="text-4xl font-bold">Poison Modz</h1>
             </div>
+            <button onclick="togglePlay()" id="playButton" class="bg-yellow-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2">
+                <i id="playIcon" class="fas fa-play"></i> <!-- Default icon is play -->
+                <span id="playText">Mehrab</span>
+            </button>
             <button onclick="location.href='upload.html'" class="bg-white text-blue-500 px-4 py-2 rounded-lg">Upload</button>
         </div>
         <p class="mt-4 text-lg">Explore the best game mods and enhance your gaming experience!</p>
         <p class="mt-4 text-lg">Start by uploading your Mod here!</p>
-
-        <!-- Play Button -->
-        <button onclick="togglePlay()" class="bg-yellow-500 text-white px-4 py-2 rounded-lg mt-4">
-            <i class="fas fa-play"></i> Mehrab
-        </button>
     </header>
 
     <!-- Main Content -->
@@ -62,6 +61,7 @@
     <!-- Audio Element -->
     <audio id="bgMusic" loop>
         <source src="assets/mehrab.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
     </audio>
 
     <!-- Your JavaScript to control audio playback -->
@@ -69,12 +69,21 @@
 
     <script>
         var audio = document.getElementById('bgMusic');
+        var playButton = document.getElementById('playButton');
+        var playIcon = document.getElementById('playIcon');
+        var playText = document.getElementById('playText');
 
         function togglePlay() {
             if (audio.paused) {
                 audio.play();
+                playIcon.classList.remove('fas', 'fa-play');
+                playIcon.classList.add('fas', 'fa-pause');
+                playText.textContent = 'يوقف'; 
             } else {
                 audio.pause();
+                playIcon.classList.remove('fas', 'fa-pause');
+                playIcon.classList.add('fas', 'fa-play');
+                playText.textContent = 'لعب المحراب';
             }
         }
     </script>
