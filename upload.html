@@ -6,9 +6,16 @@
     <title>Upload</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional custom styles */
+        .form-container {
+            max-width: 500px; /* Adjust as needed */
+            margin: auto;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md form-container">
         <!-- Alert Message -->
         <div class="flex items-center bg-yellow-100 p-4 rounded-lg mb-4">
             <div class="flex-shrink-0">
@@ -23,10 +30,9 @@
                     <i class="fab fa-whatsapp mr-2"></i> Contact Admin
                 </a>
             </div>
-          
         </div>
 
-        <h1 class="text-2xl font-bold mb-6">Upload Form</h1>
+        <h1 class="text-2xl font-bold mb-6 text-center">Upload Form</h1>
         <form id="uploadForm">
             <div class="mb-4">
                 <label for="title" class="block text-gray-700">Title:</label>
@@ -69,13 +75,18 @@
                 <span id="keyError" class="text-red-500 text-sm"></span>
             </div>
 
-            <button type="button" class="w-full bg-blue-500 text-white px-3 py-2 rounded-lg" onclick="handleUpload()">Upload</button><br><br>
-            <button type="button" class="w-full bg-red-500 text-white px-3 py-2 rounded-lg" onclick="location.href='index.html'">Back</button>
-                <!-- <button onclick="location.href='index.html'" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Home</button> -->
-           
-        </form><br><br>
-<div>
-        <footer class="bg-gray-800 text-white p-6">
+            <div class="flex justify-between">
+                <button type="button" class="flex items-center justify-center w-1/2 bg-blue-500 text-white px-3 py-2 rounded-lg" onclick="handleUpload()">
+                    <i class="fas fa-cloud-upload-alt mr-2"></i> Upload
+                </button>
+                <button type="button" class="flex items-center justify-center w-1/2 bg-red-500 text-white px-3 py-2 rounded-lg" onclick="location.href='index.html'">
+                    <i class="fas fa-home mr-2"></i> Home
+                </button>
+            </div>
+        </form>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-6 mt-8">
             <div class="container mx-auto text-center">
                 <p>Follow me on:</p>
                 <div class="flex justify-center space-x-4 mt-2">
@@ -85,7 +96,6 @@
                 </div>
             </div>
         </footer>
-    </div>
     </div>
 
     <script src="script.js"></script>
