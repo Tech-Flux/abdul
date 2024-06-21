@@ -90,3 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
         loadItems();
     }
 });
+
+window.addEventListener('beforeunload', function () {
+    var audio = document.getElementById('bgMusic');
+    audio.pause();
+});
