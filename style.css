@@ -1,0 +1,12 @@
+    .item-footer {
+        font-style: italic;
+        font-size: 0.875rem; /* Adjust font size as needed */
+        color: #6B7280; /* Adjust color */
+        margin-top: 0.5rem;
+    }
+
+.uploader-name {
+          font-size: 0.875rem; /* Adjust font size as needed */
+          color: #4B5563; /* Adjust color */
+          margin-top: 0.5rem; /* Adjust spacing */
+      }
